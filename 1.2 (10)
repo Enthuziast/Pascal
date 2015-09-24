@@ -1,0 +1,21 @@
+program prim1_2_10;
+
+var 
+    a,b,x,y,h:real;
+    i,n:integer;
+begin
+    writeln('Введите границы отрезка(a и b)');
+    readln(a,b);
+    i:=1;
+    writeln('Введите n');
+    readln(n);
+    h:=(b-a)/(n-1);
+    x:=a;
+      for i:=1 to n do
+  begin
+      y:=(1.1*exp(x)+abs(cos(sqrt(pi*x)))-4/9);
+      writeln('x=',x:6:3,' f(x)=',y:8:4);
+      x:=x+h
+  end;
+  readln
+end.
