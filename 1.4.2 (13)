@@ -1,0 +1,34 @@
+program prim1_4_2;
+
+var
+  x: array[1..10] of real;
+  y: array[1..10] of real;
+  sr, S: real;
+  n, pl, i: integer;//kol
+
+begin
+  writeln('Введите n');
+  readln(n);
+  writeln('Введите массив x');
+  for i := 1 to n do
+    read(x[i]);
+  writeln('Введите массив y');
+  for i := 1 to n do
+    read(y[i]);
+  S := 0; // сумма ординат
+  pl := 0; // положительные абциссы и орлинаты
+  //kol := 0; // количество абцисс и ординат
+  for i := 1 to n do 
+  begin
+    if (x[i] > 0) and (y[i] > 0) then
+      pl := pl + 1
+    else begin
+      S := S + y[i];
+      //kol := kol + 1;
+    end;
+  end;
+  sr := S / n; // S / kol;
+  writeln('Количество X и Y положительнх:', pl);
+  writeln('Средняя ордината:', sr:5:2);
+  readln;
+end.
