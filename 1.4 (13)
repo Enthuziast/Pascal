@@ -1,0 +1,22 @@
+program prim1_4_1;
+
+var
+  n, i: byte;
+  с, b: array[1..10] of integer;
+  sqr_sum: integer;
+
+begin
+  n := 0;
+  while (n > 10) or (n < 1) do 
+  begin
+    write('n = '); readln(n);
+  end;
+  sqr_sum := 0;
+  for i := 1 to n do 
+  begin
+    write('с', i, ' = '); readln(с[i]);
+    write('b', i, ' = '); readln(b[i]);
+    sqr_sum := sqr_sum + sqr(с[i] - b[i])
+  end;
+  writeln(sqrt(sqr_sum):10:3);
+end.
