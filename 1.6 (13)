@@ -1,0 +1,24 @@
+program prim1_6_13;
+
+var
+  i, n: integer;
+  a, x, x1, dx, y: real;
+begin
+  writeln('Введите n, a');
+  readln(n, a);
+  x1:= -6 * A;
+  dx:= 2 * a / 5;
+  x:= -x1;
+  writeln(' ':35, 'Таблица значений функции');
+  writeln(' ', n, x, y);
+    for i := 1 to n do
+  begin
+    if x < A then
+      y:= A * sqrt(sqr(A)-sqr(X-A))
+    else
+      y:= A*exp(3/2*ln(X-A));
+    writeln(' ':35, x:8:2, y:8:2);
+    x := x + dx;
+  end;
+  readln
+end.
