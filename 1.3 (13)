@@ -1,0 +1,15 @@
+program prim1_3_2_13;
+
+var
+  k,n:integer;
+  x,y,s:real;
+begin
+  writeln('Введите x, n');
+  readln(x, n);
+  s:= 0;
+    for k:=1 to n do
+      s:= S + (x / k + (sin((cos((k * pi) / 3))))/(cos((cos((k * pi) / 3)))) * ln(x + k));
+    y:= exp(1 / 3 * ln(X))*s;
+    writeln('Значение функции равно',y:8:2);
+  readln
+end.
