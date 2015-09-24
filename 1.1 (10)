@@ -1,0 +1,11 @@
+program prim1_1_10;
+
+Var 
+    a,b,x,y: real;
+begin
+    Writeln('введите значение x');
+    Readln(x);
+          y:=(1.1*exp(x)+abs(cos(sqrt(pi*x)))-4/9);
+        writeln ('y = ', y:6:2);
+  readln;
+End.
