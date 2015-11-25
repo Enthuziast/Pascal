@@ -1,1 +1,39 @@
+program prim2_5_1;
 
+
+var
+  a: array [1..6, 1..4] of real;
+  i, j, x, y: integer;
+  sred: real;
+
+begin
+  Write('Velichina: '); 
+  readln(x);
+  writeln('Vvedite matricy A(6,4)');
+  for i := 1 to 6 do
+    for j := 1 to 4 do
+      read(A[i, j]);
+  writeln('           Matrica A'); 
+  for i := 1 to 6 do
+  begin
+    for j := 1 to 4 do
+      write(A[i, j]:6:2, '       ');
+    writeln;
+  end;
+  
+  Writeln('Stroki: ');
+  for i := 1 to 6 do
+  begin
+    sred := 0;
+    for j := 1 to 4 do
+      sred := sred + a[i, j];
+    if sred / 4 > x then
+    begin
+      y := y + 1;
+      for j := 1 to 4 do
+        write(a[i, j]:4);
+      writeln;
+    end;
+  end;
+  Writeln('Chislo strok - ', y);
+end.
