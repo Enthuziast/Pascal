@@ -1,0 +1,45 @@
+program prim2_5_2;
+
+var
+  A: array[1..300, 1..300]of real;
+  k, i, j, n: integer;
+  sum: real;
+
+begin
+  sum := 0;
+  
+  write('Vvedite razmernost matricy n: ');
+  readln(n);
+  
+  writeln('Vvedite matricy A(n,n)');
+  for i := 1 to n do
+    for j := 1 to n do
+      read(A[i, j]);
+  writeln('           Matrica A');
+  
+  for i := 1 to n do
+  begin
+    for j := 1 to n do
+      write(A[i, j]:6:2, '     ');
+    writeln;
+  end;
+  
+  for i := 1 to n do
+    for j := 1 to n do
+    begin
+      begin
+        if A[i, j] < 0 then A[i, j] := A[i, j] + A[i, j + 1];
+      end;
+      begin
+        if A[i, 1] < 0 then A[i, 1] := A[i, 1] + A[i, n];
+      end;
+    end;
+  
+  writeln('           Matrica A izmenennaya');
+  for i := 1 to n do
+  begin
+    for j := 1 to n do
+      write(A[i, j]:6:2, '     ');
+    writeln;
+  end;
+end.
